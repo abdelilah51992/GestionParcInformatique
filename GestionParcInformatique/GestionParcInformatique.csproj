@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D344BBB5-8DC9-44B5-985B-49D627905194}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GestionParcInformatique</RootNamespace>
+    <AssemblyName>GestionParcInformatique</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="AppContext.cs" />
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609241136584_intial.cs" />
+    <Compile Include="Migrations\201609241136584_intial.Designer.cs">
+      <DependentUpon>201609241136584_intial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Agent.cs" />
+    <Compile Include="Model\Categorie.cs" />
+    <Compile Include="Model\Cause.cs" />
+    <Compile Include="Model\ComboboxItem.cs" />
+    <Compile Include="Model\Contrat.cs" />
+    <Compile Include="Model\Fonction.cs" />
+    <Compile Include="Model\Grade.cs" />
+    <Compile Include="Model\Intervention.cs" />
+    <Compile Include="Model\Materiel.cs" />
+    <Compile Include="Model\Panne.cs" />
+    <Compile Include="Model\PanneType.cs" />
+    <Compile Include="Model\SousCategorie.cs" />
+    <Compile Include="Model\StructureAffectation.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\AgentVM.cs" />
+    <Compile Include="ViewModel\ContratVM.cs" />
+    <Compile Include="ViewModel\InterventionVM.cs" />
+    <Compile Include="ViewModel\MaterielVM.cs" />
+    <Compile Include="ViewModel\PanneVM.cs" />
+    <Compile Include="View\AgentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AgentView.Designer.cs">
+      <DependentUpon>AgentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ContratView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ContratView.Designer.cs">
+      <DependentUpon>ContratView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EquipementView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EquipementView.Designer.cs">
+      <DependentUpon>EquipementView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InterventionsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InterventionsView.Designer.cs">
+      <DependentUpon>InterventionsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListContratView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ListContratView.Designer.cs">
+      <DependentUpon>ListContratView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListInterventions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ListInterventions.Designer.cs">
+      <DependentUpon>ListInterventions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PanneView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PanneView.Designer.cs">
+      <DependentUpon>PanneView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609241136584_intial.resx">
+      <DependentUpon>201609241136584_intial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\AgentView.resx">
+      <DependentUpon>AgentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ContratView.resx">
+      <DependentUpon>ContratView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EquipementView.resx">
+      <DependentUpon>EquipementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InterventionsView.resx">
+      <DependentUpon>InterventionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListContratView.resx">
+      <DependentUpon>ListContratView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListInterventions.resx">
+      <DependentUpon>ListInterventions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PanneView.resx">
+      <DependentUpon>PanneView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\GestionParcInformatique.ViewModel.AgentVM.datasource" />
+    <None Include="Properties\DataSources\GestionParcInformatique.ViewModel.ContratVM.datasource" />
+    <None Include="Properties\DataSources\GestionParcInformatique.ViewModel.InterventionVM.datasource" />
+    <None Include="Properties\DataSources\GestionParcInformatique.ViewModel.MaterielVM.datasource" />
+    <None Include="Properties\DataSources\GestionParcInformatique.ViewModel.PanneVM.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="intro_gestionpark.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
